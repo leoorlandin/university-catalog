@@ -1,0 +1,69 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <form class="card">
+    <section class="avatar"></section>
+
+    <section class="details">
+      <h3>Detalhes</h3>
+
+      <div class="item">
+        <div>Avatar URL</div>
+        <div>
+          <input type="url" name="avatar_url" placeholder="http://">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Nome</div>
+        <div>
+          <input type="text" name="name" placeholder="Insira seu nome completo">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Data de nascimento</div>
+        <div>
+          <input type="date" name="birth">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Grau de escolaridade</div>
+        <div>
+
+          <select name="formation">
+
+            <option value="value1">Ensino Médio Completo</option>
+            <option value="value2">Ensino Superior Completo</option>
+            <option value="value3">Mestrado Completo</option>
+            <option value="value4">Doutorado Completo</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Tipo de aula</div>
+        <div>
+          <span><input type="radio" name="lecture" value="presential" checked="checked">Presencial</span>
+          <span><input type="radio" name="lecture" value="remote">À Distância</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Área de atuação</div>
+        <div>
+          <input type="text" name="area" placeholder="Insira suas áreas de atuação separando-as com vírgula">
+        </div>
+
+      </div>
+
+      <button type="submit">Salvar</button>
+
+    </section>
+
+  </form>
+
+
+{% endblock content %}
