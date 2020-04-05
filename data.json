@@ -1,3 +1,14 @@
 {
-  "teachers": []
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Isaac Newton",
+      "birth": -27080352000000,
+      "formation": "doctor",
+      "lecture": "presential",
+      "area": "Física, Matemática",
+      "created_at": 1586080257910
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <form class="card">
+  <form class="card" method="POST" action="/teachers">
     <section class="avatar"></section>
 
     <section class="details">
@@ -34,10 +34,10 @@
 
           <select name="formation">
 
-            <option value="value1">Ensino Médio Completo</option>
-            <option value="value2">Ensino Superior Completo</option>
-            <option value="value3">Mestrado Completo</option>
-            <option value="value4">Doutorado Completo</option>
+            <option value="high-school">Ensino Médio Completo</option>
+            <option value="college">Ensino Superior Completo</option>
+            <option value="master">Mestrado Completo</option>
+            <option value="doctor">Doutorado Completo</option>
 
           </select>
         </div>
@@ -64,6 +64,5 @@
     </section>
 
   </form>
-
 
 {% endblock content %}
