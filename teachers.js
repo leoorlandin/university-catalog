@@ -1,6 +1,22 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+//SHOW
+exports.show = function (req, res) {
+  
+  const {id} = req.params
+
+  const foundTeacher = data.teachers.find(function(instructor){
+    return instructor.id == id
+  })
+
+  if(!foundTeacher) return res.send('Teacher not found!')
+
+  return res.render('teachers/show', {teacher: foundTeacher})
+}
+
+
+//CREATE
 exports.post = function (req, res) {
 
   const keys = Object.keys(req.body)
@@ -28,8 +44,8 @@ exports.post = function (req, res) {
     created_at
   })
 
-  fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
-    if(err) return res.send("Write file error")
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send("Write file error")
 
     return res.redirect("/teachers")
   })
