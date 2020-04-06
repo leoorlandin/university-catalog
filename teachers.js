@@ -1,20 +1,29 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { age, date } = require('./util')
 
 //SHOW
 exports.show = function (req, res) {
-  
-  const {id} = req.params
 
-  const foundTeacher = data.teachers.find(function(instructor){
+  const { id } = req.params
+
+  const foundTeacher = data.teachers.find(function (instructor) {
     return instructor.id == id
   })
 
-  if(!foundTeacher) return res.send('Teacher not found!')
+  if (!foundTeacher) return res.send('Teacher not found!')
 
-  return res.render('teachers/show', {teacher: foundTeacher})
+
+  const teacher = {
+    ...foundTeacher,
+    birth: age(foundTeacher.birth),
+    areas: foundTeacher.areas.split(","),
+    created_at: new Intl.DateTimeFormat('en-US').format(foundTeacher.created_at)
+  }
+
+
+  return res.render('teachers/show', { teacher })
 }
-
 
 //CREATE
 exports.post = function (req, res) {
@@ -27,7 +36,7 @@ exports.post = function (req, res) {
     }
   }
 
-  let { avatar_url, name, birth, formation, lecture, area } = req.body
+  let { avatar_url, name, birth, formation, lecture,  s } = req.body
 
   birth = Date.parse(birth)
   const created_at = Date.now()
@@ -40,7 +49,7 @@ exports.post = function (req, res) {
     birth,
     formation,
     lecture,
-    area,
+    areas,
     created_at
   })
 
@@ -52,4 +61,23 @@ exports.post = function (req, res) {
 
   // return res.send(req.body)
 
+}
+
+//EDIT
+exports.edit = function (req, res) {
+
+  const { id } = req.params
+
+  const foundTeacher = data.teachers.find(function (instructor) {
+    return instructor.id == id
+  })
+
+  if (!foundTeacher) return res.send("Teacher not found!")
+
+  const teacher = {
+    ...foundTeacher,
+    birth: date(foundTeacher.birth),
+  }
+
+  return res.render("teachers/edit", { teacher })
 }
