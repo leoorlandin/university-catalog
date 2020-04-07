@@ -18,7 +18,7 @@ exports.show = function (req, res) {
     ...foundTeacher,
     birth: age(foundTeacher.birth),
     areas: foundTeacher.areas.split(","),
-    created_at: new Intl.DateTimeFormat('en-US').format(foundTeacher.created_at)
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
   }
 
 
@@ -36,7 +36,7 @@ exports.post = function (req, res) {
     }
   }
 
-  let { avatar_url, name, birth, formation, lecture,  s } = req.body
+  let { avatar_url, name, birth, formation, lecture, areas } = req.body
 
   birth = Date.parse(birth)
   const created_at = Date.now()
@@ -80,4 +80,5 @@ exports.edit = function (req, res) {
   }
 
   return res.render("teachers/edit", { teacher })
+
 }
