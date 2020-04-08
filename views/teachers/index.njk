@@ -1,50 +1,41 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <div class="card">
-    <section class="avatar"></section>
+  <div class="card table-container">
 
-    <section class="details">
-      <h3>Detalhes</h3>
+    <table width="100%">
 
-      <div class="item">
-        <div>Professor</div>
-        <div>Isaac Newton</div>
-      </div>
+      <thead>
+        <tr>
+          <th>Professor</th>
+          <th>Aulas Ministradas</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
 
-      <div class="item">
-        <div>Idade</div>
-        <div>40</div>
-      </div>
+      <tbody>
+        {% for teacher in teachers%}
+          <tr>
+            <td>
+              <span style="background-image: url({{teacher.avatar_url}})"></span>
+              {{teacher.name}}</td>
 
-      <div class="item">
-        <div>Grau de escolaridade</div>
-        <div>Trinity College</div>
-      </div>
+            <td>
+              {% for area in teacher.areas %}
+                {{area}}
+              {% endfor %}
+            </td>
+            <td>
+              <a href="/teachers/{{teacher.id}}">Ver</a>
+            </td>
+          </tr>
 
-      <div class="item">
-        <div>Tipo de aula</div>
-        <div>Presencial</div>
-      </div>
+          {%endfor%}
 
-      <div class="item">
-        <div>
-          Acompanhamento
-          <div>
-            <span>Física</span>
-            <span>Matemática</span>
-          </div>
-        </div>
+        </tbody>
 
-      </div>
-
-      <div class="item">
-        <div>Desde</div>
-        <div>01/01/1668</div>
-      </div>
+      </table>
 
     </div>
-  </section>
-</div>
 
-{% endblock content %}
+  {% endblock content %}
