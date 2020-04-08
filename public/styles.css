@@ -190,5 +190,15 @@ a.button {
   text-decoration: none;
 }
 
+#delete-button button[type="submit"]{
+  margin-top: 8px;
+  background-color: red;
+}
+
+.button-block ,button[type="submit"]{
+  
+}
+
+
 
 

@@ -1,16 +1,6 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "http://google.com",
-      "name": "Isaac Newton",
-      "birth": 847670400000,
-      "formation": "doctor",
-      "lecture": "presential",
-      "areas": "Física, Matemática, Química",
-      "created_at": 1586183724234
-    },
-    {
       "id": "2",
       "avatar_url": "http://google.com",
       "name": "Seu Jorah 25",
