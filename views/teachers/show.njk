@@ -37,7 +37,12 @@
 
       <div class="item">
         <div>Tipo de aula</div>
-        <div>Presencial</div>
+        <div>
+          {% if teacher.lecture == "remote" %}
+            À Distância
+            {%else%} Presencial
+          {% endif %}
+        </div>
       </div>
 
       <div class="item">
