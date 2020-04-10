@@ -3,23 +3,24 @@
 {% block content %}
 
   <div class="card">
-    <section class="avatar" style="background: url({{teacher.avatar_url}}) no-repeat center center / cover"></section>
+    <section class="avatar" style="background: url({{student.avatar_url}}) no-repeat center center / cover"></section>
 
     <section class="details">
-      <form method="POST" action="/teachers?_method=PUT">
+      <form method="POST" action="/students?_method=PUT">
 
         <h3>Detalhes</h3>
 
-        {% include "teachers/fields.njk" %}
+        {% include "students/fields.njk" %}
 
-        <input type="hidden" name="id" value="{{teacher.id}}">
+        <input type="hidden" name="id" value="{{student.id}}">
       </form>
 
-      <form action="/teachers?_method=DELETE" method="POST" id="delete-button">
-        <input type="hidden" name="id" value="{{teacher.id}}">
+      <form action="/students?_method=DELETE" method="POST" id="delete-button">
+        <input type="hidden" name="id" value="{{student.id}}">
         <button type="submit">Deletar</button>
       </form>
 
+      {% include "../confirm.njk" %}
     </section>
   </div>
 
