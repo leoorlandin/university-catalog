@@ -199,6 +199,7 @@ a.button {
 
 .table-container table{
   border-spacing: 0;
+  border-collapse: initial;
 }
 
 .table-container thead tr th {
@@ -246,3 +247,12 @@ tbody tr td:last-child a{
   box-shadow: 3px 1px 6px -4px black;  
 }
 
+
+tbody tr td .lectures{
+  display: inline-block;
+}
+
+
+tbody tr td:nth-child(2){
+  
+}

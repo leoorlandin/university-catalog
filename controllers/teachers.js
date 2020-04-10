@@ -1,9 +1,18 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require('./util')
+const data = require('../data.json')
+const { age, date } = require('../util')
 
 //INDEX
 exports.index = function (req, res) {
+  const { id } = req.body
+
+  const foundTeacher = data.teachers
+
+
+
+
+
+  console.log()
 
 
   return res.render("teachers/index", { teachers: data.teachers })
@@ -37,6 +46,11 @@ exports.show = function (req, res) {
 }
 
 //CREATE
+exports.create = function (req, res) {
+  return res.render("teachers/create")
+}
+
+//POST
 exports.post = function (req, res) {
 
   const keys = Object.keys(req.body)
