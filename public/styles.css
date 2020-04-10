@@ -236,7 +236,8 @@ tbody tr td:first-child span {
   border: 2px solid white;
 }
 
-tbody tr td:last-child a{
+tbody tr td:last-child a,
+.table-container a{
   background-color: var(--primary-color);
   padding: 8px 16px;
   text-transform: uppercase;
@@ -247,12 +248,10 @@ tbody tr td:last-child a{
   box-shadow: 3px 1px 6px -4px black;  
 }
 
-
-tbody tr td .lectures{
+.table-container a{
+  margin-bottom: 16px;
+  margin-left: 8px;
   display: inline-block;
 }
 
 
-tbody tr td:nth-child(2){
-  
-}

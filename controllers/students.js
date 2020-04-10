@@ -6,6 +6,17 @@ const { age, date, grade } = require('../util')
 exports.index = function (req, res) {
 
 
+  
+
+ function transform(studentYear){
+   const translate = grade(studentYear)
+   console.log(translate)
+   return translate
+ }
+
+ data.students.year = transform(data.students.year)
+
+
   return res.render("students/index", { students: data.students })
 
 

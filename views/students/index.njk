@@ -4,29 +4,32 @@
   <div class="card table-container">
 
     <table width="100%">
+      <a href="/teachers/create">Novo</a>
 
       <thead>
         <tr>
-          <th>Professor</th>
-          <th>Aulas Ministradas</th>
+          <th>Aluno</th>
+          <th>Email</th>
+          <th>Ano Escolar</th>
           <th>Ação</th>
         </tr>
       </thead>
 
       <tbody>
-        {% for teacher in teachers%}
-          <input type="hidden" name="id" value="{{teacher.id}}">
+        {% for student in students%}
+          <input type="hidden" name="id" value="{{student.id}}">
           <tr>
             <td>
-              <span style="background-image: url({{teacher.avatar_url}})"></span>
-              {{teacher.name}}</td>
+              <span style="background-image: url({{student.avatar_url}})"></span>
+              {{student.name}}</td>
             <td>
-              {% for area in teacher.areas %}
-                <span>{{area}}</span>
-              {% endfor %}
+              {{student.email}}
             </td>
             <td>
-              <a href="/teachers/{{teacher.id}}">Ver</a>
+              {{student.year}}
+            </td>
+            <td>
+              <a href="/students/{{student.id}}">Ver</a>
             </td>
           </tr>
 
