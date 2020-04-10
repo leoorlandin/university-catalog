@@ -1,10 +1,29 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Leonardo Orlandin Dornelas",
+      "email": "leonardo.1117@hotmail.com",
+      "birth": 847670400000,
+      "year": "2nd-high",
+      "workload": "44"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Adoniran Barbosa",
+      "email": "leonardo.1117@hotmail.com",
+      "birth": 7956835200000,
+      "year": "5th-elementary",
+      "workload": "32"
+    }
+  ],
   "teachers": [
     {
       "id": 1,
       "avatar_url": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "name": "Seu Jorah 22",
+      "name": "Isaac Newton",
       "birth": 689817600000,
       "formation": "master",
       "lecture": "presential",
@@ -13,23 +32,13 @@
     },
     {
       "id": 2,
-      "avatar_url": "http://google.com",
+      "avatar_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "name": "Seu Jorah",
-      "birth": -27080352000000,
+      "birth": 635644800000,
       "formation": "high-school",
       "lecture": "presential",
-      "areas": "Física",
-      "created_at": 1586453163703
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Adoniran Barbosa",
-      "birth": -27080352000000,
-      "formation": "college",
-      "lecture": "presential",
       "areas": "Física, Matemática",
-      "created_at": 1586454299516
+      "created_at": 1586528520098
     }
   ]
 }
