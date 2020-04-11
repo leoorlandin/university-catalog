@@ -1,21 +1,17 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date, grade } = require('../util')
+const { date, grade } = require('../util')
 
 //INDEX
 exports.index = function (req, res) {
 
 
-  
+  // const students = {
+  //   ...data.students,
+  //   year: grade(data.students.year)
+  // }
 
- function transform(studentYear){
-   const translate = grade(studentYear)
-   console.log(translate)
-   return translate
- }
-
- data.students.year = transform(data.students.year)
-
+  // console.log(students)
 
   return res.render("students/index", { students: data.students })
 
@@ -38,13 +34,13 @@ exports.post = function (req, res) {
     }
   }
 
-  
+
 
   birth = Date.parse(req.body.birth)
   let id = 1
   const lastStuduent = data.students[data.students.length - 1]
 
-  if(lastStuduent){
+  if (lastStuduent) {
     id = lastStuduent.id + 1
   }
 

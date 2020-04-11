@@ -4,7 +4,7 @@
   <div class="card table-container">
 
     <table width="100%">
-      <a href="/teachers/create">Novo</a>
+      <a href="/students/create">Novo</a>
 
       <thead>
         <tr>
@@ -26,7 +26,14 @@
               {{student.email}}
             </td>
             <td>
-              {{student.year}}
+              {% if student.year == "5th-elementary" %} 5º Ano - Ensino Fundamental
+              {% elif student.year == "6th-elementary" %} 6º Ano - Ensino Fundamental
+              {% elif student.year == "7th-elementary" %} 7º Ano - Ensino Fundamental
+              {% elif student.year == "8th-elementary" %} 8º Ano - Ensino Fundamental
+              {% elif student.year == "1st-high" %} 1º Ano - Ensino medio
+              {% elif student.year == "2nd-high" %} 2º Ano - Ensino medio
+              {% elif student.year == "3rd-high" %} 3º Ano - Ensino medio
+              {% endif %}
             </td>
             <td>
               <a href="/students/{{student.id}}">Ver</a>
