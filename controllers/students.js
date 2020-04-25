@@ -13,6 +13,8 @@ exports.index = function (req, res) {
 
   // console.log(students)
 
+  
+
   return res.render("students/index", { students: data.students })
 
 

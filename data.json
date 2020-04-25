@@ -39,6 +39,16 @@
       "lecture": "presential",
       "areas": "Física, Matemática",
       "created_at": 1586528520098
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://pbs.twimg.com/media/ESSxBznX0AQD9D2.png",
+      "name": "Cerginho da Pereira Nunes",
+      "birth": 444441600000,
+      "formation": "high-school",
+      "lecture": "remote",
+      "areas": "Filosofia",
+      "created_at": 1586731122311
     }
   ]
 }
