@@ -23,6 +23,7 @@
             <td id="teacher-areas">
               {% for area in teacher.areas %}
                 <span>{{area}}</span>
+                <input type="hidden" name="id" value="{{teacher.id}}">
               {% endfor %}
             </td>
             <td>

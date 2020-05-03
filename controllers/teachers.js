@@ -5,23 +5,6 @@ const { age, date } = require('../util')
 //INDEX
 exports.index = function (req, res) {
 
-  // const { id } = req.body
-  // let index = 0
-
-  // const foundTeacher = data.teachers.find(function (teacher, foundIndex) {
-  //   if (id == teacher.id) {
-  //     index = foundIndex
-  //     return true
-  //   }
-  // })
-
-  // const teacher = {
-  //   ...data.teachers,
-  //   areas: data.teachers[index],
-  //   index: foundTeacher.id
-  // }
-
-
 
 
   return res.render("teachers/index", { teachers: data.teachers })
